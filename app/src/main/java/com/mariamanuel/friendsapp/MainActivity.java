@@ -1,5 +1,6 @@
 package com.mariamanuel.friendsapp;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -24,7 +25,7 @@ import org.json.JSONObject;
 
 public class MainActivity extends AppCompatActivity {
 EditText e1,e2,e3,e4;
-AppCompatButton b1;
+AppCompatButton b1,b2;
  String apiurl="https://friendsapi-re5a.onrender.com/adddata";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +37,14 @@ AppCompatButton b1;
        e3=(EditText) findViewById(R.id.nickid);
        e4=(EditText) findViewById(R.id.detailsid);
        b1=(AppCompatButton) findViewById(R.id.submitbtn);
+       b2=(AppCompatButton)findViewById(R.id.viewbtn);
+       b2.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View v) {
+               Intent i=new Intent(getApplicationContext(), ViewApp.class);
+               startActivity(i);
+           }
+       });
        b1.setOnClickListener(new View.OnClickListener() {
            @Override
            public void onClick(View v) {
