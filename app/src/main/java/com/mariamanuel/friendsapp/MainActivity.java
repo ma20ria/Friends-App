@@ -70,6 +70,10 @@ AppCompatButton b1,b2;
                        new Response.Listener<JSONObject>() {
                            @Override
                            public void onResponse(JSONObject response) {
+                               e1.setText("");
+                               e2.setText("");
+                               e3.setText("");
+                               e4.setText("");
                                Toast.makeText(getApplicationContext(), "Added", Toast.LENGTH_SHORT).show();
                            }
                        },

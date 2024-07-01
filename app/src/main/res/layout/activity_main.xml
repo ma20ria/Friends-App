@@ -60,7 +60,7 @@
     <androidx.appcompat.widget.AppCompatButton
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="VIEW ALL"
+        android:text="VIEW FRIENDS"
         android:layout_margin="50px"
         android:id="@+id/viewbtn"
         android:background="#0C1543"
